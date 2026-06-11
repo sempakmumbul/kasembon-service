@@ -83,30 +83,7 @@ export default function Hero() {
             md:pt-0
           "
         >
-          {/* Badge */}
-          <span
-            className="
-              inline-flex
-              items-center
-
-              px-4
-              py-2
-
-              rounded-full
-
-              bg-white/10
-              backdrop-blur-xl
-
-              border
-              border-white/20
-
-              text-white
-              text-sm
-              font-medium
-            "
-          >
-            🔧 Servis Laptop & Komputer Kasembon
-          </span>
+          
 
           {/* Title */}
           <h1
@@ -182,82 +159,12 @@ export default function Hero() {
               flex
               flex-wrap
 
-              gap-4
+              gap-
 
               mt-8
             "
           >
-            {/* WhatsApp */}
-            <a
-  href="https://wa.me/6285156313382"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="
-    flex
-    items-center
-    gap-3
-
-    px-6
-    py-4
-
-    rounded-full
-
-    bg-gradient-to-r
-    from-green-500
-    via-emerald-500
-    to-teal-500
-
-    text-white
-    font-semibold
-
-    shadow-lg
-
-    hover:scale-105
-    hover:shadow-green-500/30
-
-    transition-all
-    duration-300
-  "
->
-  <FaWhatsapp size={20} />
-
-  <span>WhatsApp</span>
-</a>
-
-            {/* Instagram */}
-            <a
-              href="https://www.instagram.com/kasembonservis?igsh=cTJiOHJjdmpvcmY2"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-                flex
-                items-center
-                gap-3
-
-                px-6
-                py-4
-
-                rounded-full
-
-                bg-gradient-to-r
-                from-pink-500
-                via-purple-500
-                to-orange-400
-
-                text-white
-                font-semibold
-
-                shadow-lg
-
-                hover:scale-105
-
-                transition-all
-              "
-            >
-              <FaInstagram size={20} />
-
-              <span>Instagram</span>
-            </a>
+            
           </div>
 
           {/* Stats */}
@@ -269,7 +176,7 @@ export default function Hero() {
 
               gap-4
 
-              mt-10
+              mt-0
 
               max-w-3xl
             "
