@@ -117,19 +117,18 @@ export default function Portfolio() {
                 shrink-0
               "
             >
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                className="
-                  object-cover
-
-                  group-hover:scale-105
-
-                  transition-all
-                  duration-700
-                "
-              />
+             <Image
+  src={item.image}
+  alt={item.title}
+  fill
+  sizes="(max-width: 768px) 90vw, 70vw"
+  className="
+    object-cover
+    group-hover:scale-105
+    transition-all
+    duration-700
+  "
+/>
 
               <div
                 className="

@@ -1,82 +1,106 @@
 "use client";
 
 import Image from "next/image";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+
 
 export default function Hero() {
   return (
     <section
-  id="home"
-  className="
-    relative
-    min-h-screen
+      id="home"
+      className="
+        relative
+        min-h-screen
+        overflow-hidden
+      "
+    >
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/hero.jpg"
+          alt="Kasembon Servis"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+      </div>
 
-    pt-28
-    md:pt-0
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-slate-950/75" />
 
-    pb-16
-
-    flex
-    items-center
-
-    overflow-hidden
-
-    bg-slate-50
-  "
->
-      {/* Background Blur */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-200/20 blur-3xl rounded-full" />
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-300/10 blur-3xl rounded-full" />
-
-      {/* Watermark */}
+      {/* Gradient */}
       <div
         className="
           absolute
           inset-0
-          flex
-          items-center
-          justify-center
-          pointer-events-none
-          select-none
-          overflow-hidden
+          bg-gradient-to-r
+          from-slate-950/90
+          via-slate-950/70
+          to-slate-950/40
         "
-      >
-        <h1
-          className="
-            text-[180px]
-            lg:text-[320px]
-            font-black
-            text-slate-200/20
-            tracking-tight
-          "
-        >
-          KASEMBON
-        </h1>
-      </div>
+      />
 
+      {/* Blur Accent */}
+      <div
+        className="
+          absolute
+          top-20
+          left-10
+
+          w-80
+          h-80
+
+          bg-blue-500/20
+
+          blur-[120px]
+          rounded-full
+        "
+      />
+
+      {/* Content */}
       <div
         className="
           relative
           z-10
+
           max-w-7xl
           mx-auto
+
           px-6
-          grid
-          lg:grid-cols-2
-          gap-16
+
+          min-h-screen
+
+          flex
           items-center
         "
       >
-        {/* Left */}
-        <div>
+        <div
+          className="
+            max-w-3xl
+
+            pt-24
+            md:pt-0
+          "
+        >
+          {/* Badge */}
           <span
             className="
               inline-flex
               items-center
+
               px-4
               py-2
+
               rounded-full
-              bg-blue-100
-              text-blue-600
+
+              bg-white/10
+              backdrop-blur-xl
+
+              border
+              border-white/20
+
+              text-white
               text-sm
               font-medium
             "
@@ -84,133 +108,240 @@ export default function Hero() {
             🔧 Servis Laptop & Komputer Kasembon
           </span>
 
+          {/* Title */}
           <h1
             className="
-              mt-8
-              text-5xl
-              md:text-6xl
-              lg:text-7xl
+              mt-6
+
+              text-4xl
+              md:text-5xl
+              lg:text-6xl
+
               font-black
-              text-slate-900
-              leading-tight
+
+              text-white
+
+              leading-[1.1]
+              tracking-tight
             "
           >
             Solusi Servis
-            <span className="text-blue-600">
+
+            <span className="text-blue-400">
               {" "}Laptop
             </span>
+
             <br />
+
             & Komputer
+
             <br />
+
             Terpercaya
           </h1>
 
+          {/* Tagline */}
+          <p
+            className="
+              mt-4
+
+              text-blue-300
+
+              font-medium
+
+              tracking-wide
+            "
+          >
+            Cepat • Bergaransi • Profesional
+          </p>
+
+          {/* Description */}
           <p
             className="
               mt-6
-              text-lg
-              text-slate-600
-              max-w-xl
+
+              text-base
+              md:text-xl
+
+              text-slate-300
+
+              max-w-2xl
+
+              leading-relaxed
             "
           >
             Melayani servis laptop, komputer,
             instal ulang Windows, upgrade SSD,
             upgrade RAM, instal software,
-            serta pengecekan perangkat gratis.
+            dan pengecekan perangkat gratis.
           </p>
 
-          <div className="flex flex-wrap gap-4 mt-10">
+          {/* Buttons */}
+          <div
+            className="
+              flex
+              flex-wrap
+
+              gap-4
+
+              mt-8
+            "
+          >
+            {/* WhatsApp */}
             <a
-              href="https://wa.me/6285156313382"
+  href="https://wa.me/6285156313382"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    flex
+    items-center
+    gap-3
+
+    px-6
+    py-4
+
+    rounded-full
+
+    bg-gradient-to-r
+    from-green-500
+    via-emerald-500
+    to-teal-500
+
+    text-white
+    font-semibold
+
+    shadow-lg
+
+    hover:scale-105
+    hover:shadow-green-500/30
+
+    transition-all
+    duration-300
+  "
+>
+  <FaWhatsapp size={20} />
+
+  <span>WhatsApp</span>
+</a>
+
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/kasembonservis?igsh=cTJiOHJjdmpvcmY2"
               target="_blank"
+              rel="noopener noreferrer"
               className="
-                bg-slate-900
-                text-white
-                px-8
+                flex
+                items-center
+                gap-3
+
+                px-6
                 py-4
+
                 rounded-full
-                transition
+
+                bg-gradient-to-r
+                from-pink-500
+                via-purple-500
+                to-orange-400
+
+                text-white
+                font-semibold
+
+                shadow-lg
+
                 hover:scale-105
+
+                transition-all
               "
             >
-              Chat WhatsApp
+              <FaInstagram size={20} />
+
+              <span>Instagram</span>
             </a>
           </div>
 
           {/* Stats */}
-          <div className="flex gap-6 mt-12 flex-wrap">
+          <div
+            className="
+              grid
+              grid-cols-2
+              md:grid-cols-3
+
+              gap-4
+
+              mt-10
+
+              max-w-3xl
+            "
+          >
             <div
               className="
-                bg-white
-                px-6
-                py-5
+                bg-white/10
+                backdrop-blur-xl
+
+                border
+                border-white/20
+
+                p-5
+
                 rounded-2xl
-                shadow-sm
               "
             >
-              <h3 className="text-3xl font-bold text-blue-600">
+              <h3 className="text-3xl font-bold text-white">
                 500+
               </h3>
-              <p className="text-slate-500 text-sm">
+
+              <p className="text-slate-300 text-sm">
                 Perangkat Diperbaiki
               </p>
             </div>
 
             <div
               className="
-                bg-white
-                px-6
-                py-5
+                bg-white/10
+                backdrop-blur-xl
+
+                border
+                border-white/20
+
+                p-5
+
                 rounded-2xl
-                shadow-sm
               "
             >
-              <h3 className="text-3xl font-bold text-blue-600">
+              <h3 className="text-3xl font-bold text-white">
                 3+
               </h3>
-              <p className="text-slate-500 text-sm">
+
+              <p className="text-slate-300 text-sm">
                 Tahun Pengalaman
               </p>
             </div>
-          </div>
-        </div>
 
-        {/* Right */}
-        <div className="relative">
-          <Image
-            src="/images/hero.jpg"
-            alt="Kasembon Servis"
-            width={800}
-            height={600}
-            priority
-            className="
-              rounded-[32px]
-              shadow-2xl
-              object-cover
-              w-full
-            "
-          />
+            <div
+              className="
+                col-span-2
+                md:col-span-1
 
-          <div
-            className="
-              absolute
-              bottom-6
-              left-6
-              bg-white/90
-              backdrop-blur-md
-              px-5
-              py-3
-              rounded-2xl
-              shadow-lg
-            "
-          >
-            <p className="font-semibold text-blue-600">
-              ✓ Bergaransi
-            </p>
+                bg-green-500/20
+                backdrop-blur-xl
 
-            <p className="text-sm text-slate-500">
-              Servis Cepat & Terpercaya
-            </p>
+                border
+                border-green-400/30
+
+                p-5
+
+                rounded-2xl
+              "
+            >
+              <h3 className="text-white font-bold">
+                ✓ Bergaransi
+              </h3>
+
+              <p className="text-slate-300 text-sm">
+                Servis Terpercaya
+              </p>
+            </div>
           </div>
         </div>
       </div>
