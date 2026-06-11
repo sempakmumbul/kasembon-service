@@ -60,6 +60,17 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
+  if (isOpen) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+
+  return () => {
+    document.body.style.overflow = "auto";
+  };
+}, [isOpen]);
+  useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -155,8 +166,11 @@ export default function Navbar() {
   top-0
   right-0
 
-  h-screen
+  h-dvh
   w-[85%]
+
+overflow-y-auto
+overscroll-contain
 
   bg-white/80
   backdrop-blur-3xl
