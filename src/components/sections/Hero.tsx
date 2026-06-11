@@ -10,8 +10,8 @@ export default function Hero() {
     relative
     min-h-screen
 
-    pt-40
-    md:pt-32
+    pt-28
+    md:pt-0
 
     pb-16
 

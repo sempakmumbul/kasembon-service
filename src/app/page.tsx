@@ -7,6 +7,8 @@ import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import Process from "@/components/sections/Process";
 import CTA from "@/components/sections/CTA";
 import Location from "@/components/sections/Location";
+import Portfolio from "@/components/sections/Portfolio";
+import Testimonials from "@/components/sections/Testimonials";
 
 import FloatingWhatsapp from "@/components/ui/FloatingWhatsapp";
 
@@ -18,9 +20,12 @@ export default function Home() {
       <Hero />
       <Services />
       <WhyChooseUs />
+    <Portfolio />
+      <Testimonials />
       <Process />
       <Location />
       <CTA />
+    
 
       <Footer />
       <FloatingWhatsapp />
