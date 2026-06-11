@@ -62,7 +62,7 @@ export default function Hero() {
     className="
       max-w-3xl
 
-      pt-20
+      pt-0
       md:pt-0
     "
   >
