@@ -15,7 +15,7 @@ export default function CTA() {
           </p>
 
           <a
-            href="https://wa.me/628123456789"
+            href="https://wa.me/6285156313382"
             target="_blank"
             className="
               inline-block
